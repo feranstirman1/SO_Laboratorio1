@@ -11,7 +11,7 @@ void *mostrarTiempo(void *arg)
     gettimeofday(&t1, NULL);
     unsigned int ut1 = t1.tv_sec * 1000000 + t1.tv_usec;
     unsigned int ut0 = t0.tv_sec * 1000000 + t0.tv_usec;
-    printf("%f\n", (double)(ut1 - ut0) / 100);
+    printf("Tiempo de un hilo: %f\n", (double)(ut1 - ut0) / 100);
 }
 
 int main(int argc, char const *argv[])
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
         gettimeofday(&t1, NULL);
         unsigned int ut1 = t1.tv_sec * 1000000 + t1.tv_usec;
         unsigned int ut0 = t0.tv_sec * 1000000 + t0.tv_usec;
-        printf("%f\n", (double)(ut1 - ut0) / 100);
+        printf("Tiempo de un proceso: %f\n", (double)(ut1 - ut0) / 100);
     }
 
     gettimeofday(&t0, NULL);
